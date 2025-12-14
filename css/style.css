@@ -1,3 +1,136 @@
+/* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+    color: #333;
+}
+
+/* ================= HEADER ================= */
+header {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+}
+
+header p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    background: #ffffff;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2c5364;
+}
+
+nav a:hover {
+    color: #ff7b00;
+}
+
+/* ================= HERO ================= */
+.hero {
+    padding: 70px 20px;
+    text-align: center;
+    background: linear-gradient(120deg, #ffecd2, #fcb69f);
+}
+
+.hero h2 {
+    font-size: 36px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 15px auto;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #ff7b00;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+/* ================= SECTIONS ================= */
+.about, .features {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.features ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.features li {
+    padding: 8px 0;
+}
+
+/* ================= STATS ================= */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    background: #203a43;
+    color: white;
+    padding: 40px;
+}
+
+.stats h2 {
+    font-size: 36px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #0f2027;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ================= ANIMATIONS ================= */
+.fade-in {
+    animation: fade 1.2s ease-in;
+}
+
+.slide-in {
+    animation: slide 1.2s ease-in;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slide {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
 /* ================= GALLERY ================= */
 
 .gallery-grid {
@@ -144,5 +277,24 @@
     color: white;
     cursor: pointer;
 }
+/* ================= SMOOTH SLIDING ================= */
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-wrapper {
+    width: 70%;
+    overflow: hidden;
+}
+
+.carousel-track img {
+    min-width: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 
 
