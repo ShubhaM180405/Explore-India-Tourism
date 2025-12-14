@@ -3,15 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Gallery | Explore India</title>
-    <link rel="stylesheet" href="css/style.css?v=5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
-    <h1>Explore India Gallery</h1>
+    <h1>Explore India</h1>
+    <p>Your Gateway to Incredible India</p>
 </header>
 
-<!-- ========== CITY SELECTION ========== -->
+<!-- ================= NAVIGATION ================= -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="places.html">Places</a>
+    <a href="packages.html">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<!-- ================= PAGE TITLE ================= -->
+<section class="hero">
+    <h2>Explore India Gallery</h2>
+    <p>Click on a destination to view images</p>
+</section>
+
+<!-- ================= CITY SELECTION ================= -->
 <section class="city-selection">
 
     <div class="city-card" onclick="openCarousel('agra')" style="background-image:url('images/taj1.jpg')">
@@ -40,13 +58,13 @@
 
 </section>
 
-<!-- ========== CAROUSEL POPUP ========== -->
+<!-- ================= CAROUSEL POPUP ================= -->
 <div id="carouselPopup" class="carousel-popup">
     <span class="close-btn" onclick="closeCarousel()">×</span>
 
     <div class="carousel-wrapper">
-        <div id="carouselTrack" class="carousel-track">
-            <!-- images inserted dynamically -->
+        <div class="carousel-track" id="carouselTrack">
+            <img id="carouselImage">
         </div>
     </div>
 
