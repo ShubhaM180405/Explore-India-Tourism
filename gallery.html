@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Gallery | Explore India</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
 
@@ -11,119 +11,45 @@
     <h1>Explore India Gallery</h1>
 </header>
 
-<!-- ================= CITY SELECTION ================= -->
-<!-- MODIFICATION START -->
+<!-- ========== CITY SELECTION ========== -->
 <section class="city-selection">
 
-    <div class="city-card" onclick="showGallery('agra')" style="background-image:url('images/taj1.jpg')">
+    <div class="city-card" onclick="openCarousel('agra')" style="background-image:url('images/taj1.jpg')">
         <h2>Agra</h2>
     </div>
 
-    <div class="city-card" onclick="showGallery('delhi')" style="background-image:url('images/delhi1.jpg')">
+    <div class="city-card" onclick="openCarousel('delhi')" style="background-image:url('images/delhi1.jpg')">
         <h2>Delhi</h2>
     </div>
 
-    <div class="city-card" onclick="showGallery('manali')" style="background-image:url('images/manali1.jpg')">
+    <div class="city-card" onclick="openCarousel('manali')" style="background-image:url('images/manali1.jpg')">
         <h2>Manali</h2>
     </div>
-    
-    <div class="city-card" onclick="showGallery('jaipur')" style="background-image:url('images/jaipur1.jpg')">
+
+    <div class="city-card" onclick="openCarousel('jaipur')" style="background-image:url('images/jaipur1.jpg')">
         <h2>Jaipur</h2>
     </div>
-    
-    <div class="city-card" onclick="showGallery('goa')" style="background-image:url('images/goa1.jpg')">
+
+    <div class="city-card" onclick="openCarousel('goa')" style="background-image:url('images/goa1.jpg')">
         <h2>Goa</h2>
     </div>
-    
-    <div class="city-card" onclick="showGallery('kerala')" style="background-image:url('images/kerala1.jpg')">
+
+    <div class="city-card" onclick="openCarousel('kerala')" style="background-image:url('images/kerala1.jpg')">
         <h2>Kerala</h2>
     </div>
 
 </section>
-<!-- MODIFICATION END -->
 
-<!-- ================= GALLERIES ================= -->
-<!-- MODIFICATION START -->
-
-<section id="agra" class="gallery-section hidden">
-    <h2>Agra Gallery</h2>
-    <div class="image-group">
-        <img src="images/taj1.jpg">
-        <img src="images/taj2.jpg">
-        <img src="images/taj3.jpg">
-        <img src="images/taj4.jpg">
-        <img src="images/taj5.jpg">
+<!-- ========== CAROUSEL POPUP ========== -->
+<div id="carouselPopup" class="carousel-popup">
+    <span class="close-btn" onclick="closeCarousel()">×</span>
+    <img id="carouselImage">
+    <div class="controls">
+        <button onclick="prevImage()">❮</button>
+        <button onclick="nextImage()">❯</button>
     </div>
-</section>
-
-<section id="delhi" class="gallery-section hidden">
-    <h2>Delhi Gallery</h2>
-    <div class="image-group">
-        <img src="images/delhi1.jpg">
-        <img src="images/delhi2.jpg">
-        <img src="images/delhi3.jpg">
-        <img src="images/delhi4.jpg">
-        <img src="images/delhi5.jpg">
-    </div>
-</section>
-
-<section id="manali" class="gallery-section hidden">
-    <h2>Manali Gallery</h2>
-    <div class="image-group">
-        <img src="images/manali1.jpg">
-        <img src="images/manali2.jpg">
-        <img src="images/manali3.jpg">
-        <img src="images/manali4.jpg">
-        <img src="images/manali5.jpg">
-    </div>
-</section>
-
-<section id="jaipur" class="gallery-section hidden">
-    <h2>Jaipur Gallery</h2>
-    <div class="image-group">
-        <img src="images/jaipur1.jpg">
-        <img src="images/jaipur2.jpg">
-        <img src="images/jaipur3.jpg">
-        <img src="images/jaipur4.jpg">
-        <img src="images/jaipur5.jpg">
-    </div>
-</section>
-
-<section id="goa" class="gallery-section hidden">
-    <h2>Goa Gallery</h2>
-    <div class="image-group">
-        <img src="images/goa1.jpg">
-        <img src="images/goa2.jpg">
-        <img src="images/goa3.jpg">
-        <img src="images/goa4.jpg">
-        <img src="images/goa5.jpg">
-    </div>
-</section>
-
-<section id="kerala" class="gallery-section hidden">
-    <h2>Kerala Gallery</h2>
-    <div class="image-group">
-        <img src="images/kerala1.jpg">
-        <img src="images/kerala2.jpg">
-        <img src="images/kerala3.jpg">
-        <img src="images/kerala4.jpg">
-        <img src="images/kerala5.jpg">
-    </div>
-</section>
-
-<!-- MODIFICATION END -->
-
-<!-- ================= IMAGE POPUP ================= -->
-<!-- MODIFICATION START -->
-<div id="popup" class="popup">
-    <span id="close">&times;</span>
-    <img id="popup-img">
 </div>
-<!-- MODIFICATION END -->
 
 <script src="js/script.js"></script>
 </body>
 </html>
-
-
-
