@@ -142,3 +142,84 @@ header {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+/* ================= INDEX PAGE STYLES ================= */
+
+/* Navigation */
+nav {
+    background: #333;
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    padding: 60px;
+    background: #f0f0f0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 32px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 15px auto;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* About & Features */
+.about, .features {
+    padding: 40px;
+    background: white;
+    max-width: 900px;
+    margin: auto;
+}
+
+.features ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background: #ddd;
+    text-align: center;
+}
+
+.stats h2 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
