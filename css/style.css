@@ -351,6 +351,83 @@ footer {
     color: white;
     cursor: pointer;
 }
+/* ================= DARK THEME ================= */
+
+body.dark {
+    background: #0e1217;
+    color: #e6e6e6;
+}
+
+/* Header */
+body.dark header {
+    background: linear-gradient(135deg, #000428, #004e92);
+}
+
+/* Navbar */
+body.dark nav {
+    background: #141a22;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.8);
+}
+
+body.dark nav a {
+    color: #e6e6e6;
+}
+
+body.dark nav a:hover {
+    color: #ff9f43;
+}
+
+/* Hero */
+body.dark .hero {
+    background: linear-gradient(120deg, #232526, #414345);
+}
+
+body.dark .hero h2,
+body.dark .hero p {
+    color: #ffffff;
+}
+
+/* Sections */
+body.dark .about,
+body.dark .features {
+    background: #0e1217;
+}
+
+/* Stats */
+body.dark .stats {
+    background: #111827;
+}
+
+/* Gallery & Packages cards */
+body.dark .gallery-card,
+body.dark .package-card,
+body.dark .city-card {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+}
+
+/* Card overlays */
+body.dark .gallery-title,
+body.dark .package-card::before,
+body.dark .city-card::before {
+    background: rgba(0,0,0,0.6);
+}
+
+/* Package popup */
+body.dark .package-content {
+    background: #1f2933;
+    color: #f1f5f9;
+}
+
+/* Carousel popup */
+body.dark .carousel-popup {
+    background: rgba(0,0,0,0.95);
+}
+
+/* Footer */
+body.dark footer {
+    background: #020617;
+}
+
 
 
 
