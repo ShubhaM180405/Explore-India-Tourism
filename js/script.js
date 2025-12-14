@@ -109,4 +109,18 @@ document.addEventListener("DOMContentLoaded", function () {
         update();
     });
 });
+// ================= PACKAGE POPUP =================
+
+function openPackage(title, duration, places, cost) {
+    document.getElementById("pkgTitle").innerText = title;
+    document.getElementById("pkgDuration").innerText = duration;
+    document.getElementById("pkgPlaces").innerText = places;
+    document.getElementById("pkgCost").innerText = cost;
+
+    document.getElementById("packagePopup").style.display = "flex";
+}
+
+function closePackage() {
+    document.getElementById("packagePopup").style.display = "none";
+}
 
