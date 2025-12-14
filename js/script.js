@@ -1,4 +1,19 @@
+// ================= DYNAMIC CITY GALLERY =================
+// MODIFICATION START
+
+function showGallery(cityId) {
+    document.querySelector('.city-selection').style.display = 'none';
+
+    document.querySelectorAll('.gallery-section')
+        .forEach(section => section.classList.add('hidden'));
+
+    document.getElementById(cityId).classList.remove('hidden');
+}
+
+// MODIFICATION END
+
 // ================= IMAGE POPUP =================
+// MODIFICATION START
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -6,11 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const popup = document.getElementById("popup");
     const popupImg = document.getElementById("popup-img");
     const closeBtn = document.getElementById("close");
-
-    if (!popup || images.length === 0) {
-        console.log("Popup elements not found");
-        return;
-    }
 
     images.forEach(img => {
         img.addEventListener("click", function () {
@@ -24,3 +34,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// MODIFICATION END
