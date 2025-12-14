@@ -309,7 +309,8 @@ footer {
 }
 
 .carousel-wrapper {
-    width: 70%;
+    width: 85%;
+    max-width: 1200px;
     overflow: hidden;
 }
 
@@ -350,5 +351,6 @@ footer {
     color: white;
     cursor: pointer;
 }
+
 
 
