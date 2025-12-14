@@ -1,181 +1,105 @@
-/* ==================================================
-   MODIFICATION START: Common styling for tourism website
-   ================================================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* ================= BODY ================= */
 body {
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
 }
 
-/* ================= HEADER ================= */
 header {
-    background: #0066cc;
+    background: #222;
     color: white;
     padding: 20px;
     text-align: center;
 }
 
-/* ================= NAVIGATION ================= */
-nav {
-    background: #003366;
-    text-align: center;
-    padding: 10px 0;
-}
+/* ================= CITY SELECTION ================= */
+/* MODIFICATION START */
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* ================= HERO SECTION ================= */
-.hero {
+.city-selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
     padding: 40px;
-    text-align: center;
-    background: white;
+    animation: fadeIn 0.8s ease;
 }
 
-.hero .btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #0066cc;
+.city-card {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.city-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    transition: background 0.4s ease;
+}
+
+.city-card h2 {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
+    font-size: 28px;
+    z-index: 1;
 }
 
-/* ================= COMMON SECTIONS ================= */
-section {
-    padding: 30px;
-    margin: 20px auto;
-    background: white;
-    width: 90%;
-    border-radius: 5px;
+.city-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
 }
 
-/* ================= CARDS ================= */
-.card {
-    background: #e6f2ff;
-    padding: 20px;
-    margin: 15px 0;
-    border-left: 5px solid #0066cc;
+.city-card:hover::before {
+    background: rgba(0,0,0,0.7);
 }
+
+/* MODIFICATION END */
 
 /* ================= GALLERY ================= */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+
+.gallery-section {
+    padding: 40px;
+    animation: slideIn 0.6s ease;
 }
 
-.gallery-item {
+.gallery-section h2 {
     text-align: center;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-/* ================= CONTACT FORM ================= */
-.contact form {
-    max-width: 500px;
-    margin: auto;
-}
-
-.contact label {
-    display: block;
-    margin-top: 10px;
-}
-
-.contact input,
-.contact textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-}
-
-.contact button {
-    margin-top: 15px;
-    padding: 10px;
-    background: #0066cc;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-/* ================= FOOTER ================= */
-footer {
-    text-align: center;
-    padding: 15px;
-    background: #003366;
-    color: white;
-    margin-top: 20px;
-}
-
-/* ==================================================
-   MODIFICATION END
-   ================================================== */
-   /* ==================================================
-   MODIFICATION START: Grouped image gallery styling
-   ================================================== */
-
-.place-gallery {
-    margin-bottom: 40px;
-}
-
-.place-gallery h2 {
-    margin-bottom: 15px;
-    color: #003366;
+    margin-bottom: 20px;
 }
 
 .image-group {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
 }
 
 .image-group img {
     width: 100%;
-    height: 150px;
+    height: 180px;
     object-fit: cover;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
+    cursor: pointer;
+    border-radius: 8px;
 }
 
-.image-group img:hover {
-    transform: scale(1.05);
-}
-
-/* ==================================================
-   MODIFICATION END
-   ================================================== */
-/* MODIFICATION START: Image popup styling */
+/* ================= POPUP ================= */
+/* MODIFICATION START */
 
 .popup {
     display: none;
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.85);
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -184,6 +108,7 @@ footer {
 .popup img {
     max-width: 80%;
     max-height: 80%;
+    animation: zoomIn 0.4s ease;
 }
 
 #close {
@@ -197,5 +122,23 @@ footer {
 
 /* MODIFICATION END */
 
+.hidden {
+    display: none;
+}
 
+/* ================= ANIMATIONS ================= */
 
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
