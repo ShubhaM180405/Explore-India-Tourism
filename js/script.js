@@ -36,3 +36,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // MODIFICATION END
+// ================= ANIMATED COUNTERS =================
+
+document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll('.count');
+
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+
+        const update = () => {
+            if (count < target) {
+                count += Math.ceil(target / 100);
+                counter.innerText = count;
+                setTimeout(update, 30);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        update();
+    });
+});
+
