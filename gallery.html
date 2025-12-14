@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Gallery | Explore India</title>
-    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body>
 
@@ -43,7 +43,13 @@
 <!-- ========== CAROUSEL POPUP ========== -->
 <div id="carouselPopup" class="carousel-popup">
     <span class="close-btn" onclick="closeCarousel()">×</span>
-    <img id="carouselImage">
+
+    <div class="carousel-wrapper">
+        <div id="carouselTrack" class="carousel-track">
+            <!-- images inserted dynamically -->
+        </div>
+    </div>
+
     <div class="controls">
         <button onclick="prevImage()">❮</button>
         <button onclick="nextImage()">❯</button>
