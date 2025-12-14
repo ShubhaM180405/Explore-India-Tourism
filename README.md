@@ -17,26 +17,21 @@ The website provides information about popular tourist places, tour packages, im
 
 ## 📂 Project Structure
 explore-india-tourism/
-│
-├── index.html
-├── places.html
-├── packages.html
-├── gallery.html
-├── contact.html
-│
-├── css/
-│ └── style.css
-│
-├── js/
-│ └── script.js
-│
-├── images/
-│ └── tajmahal.jpg
-│ └── goa.jpg
-│ └── kerala.jpg
-│ └── jaipur.jpg
-│
-└── README.md
+- index.html
+- places.html
+- packages.html
+- gallery.html
+- contact.html
+- css/
+-- style.css
+- js/
+-- script.js
+- images/
+-- tajmahal.jpg
+-- goa.jpg
+-- kerala.jpg
+-- jaipur.jpg
+- README.md
 
 ---
 
