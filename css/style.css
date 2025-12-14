@@ -152,3 +152,18 @@ footer {
     text-align: center;
     padding: 20px;
 }
+/* ================= PACKAGE PAGE FIX ================= */
+
+.packages .card {
+    height: 160px;
+}
+
+.packages .card img {
+    height: 100%;
+}
+
+.package-info {
+    font-size: 14px;
+    padding: 10px;
+}
+
