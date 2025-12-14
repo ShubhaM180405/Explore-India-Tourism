@@ -1,21 +1,22 @@
 /* ==================================================
-   MODIFICATION START: JavaScript added for interactivity
+   MODIFICATION START: Dynamic gallery popup
    ================================================== */
 
-// Display welcome message when website loads
-window.onload = function () {
-    console.log("Welcome to Explore India Tourism Website");
-};
+const images = document.querySelectorAll(".image-group img");
+const popup = document.getElementById("popup");
+const popupImg = document.getElementById("popup-img");
+const closeBtn = document.getElementById("close");
 
-// Simple form submission alert
-const form = document.querySelector("form");
-if (form) {
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        alert("Thank you for contacting us!");
-        form.reset();
+images.forEach(img => {
+    img.addEventListener("click", () => {
+        popup.style.display = "flex";
+        popupImg.src = img.src;
     });
-}
+});
+
+closeBtn.onclick = () => {
+    popup.style.display = "none";
+};
 
 /* ==================================================
    MODIFICATION END
