@@ -123,4 +123,19 @@ function openPackage(title, duration, places, cost) {
 function closePackage() {
     document.getElementById("packagePopup").style.display = "none";
 }
+// ================= DARK MODE TOGGLE =================
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("themeToggle");
+
+    if (!toggle) return;
+
+    toggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+
+        toggle.textContent =
+            document.body.classList.contains("dark")
+            ? "☀️ Light"
+            : "🌙 Dark";
+    });
+});
 
