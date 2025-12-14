@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
 // ================= CAROUSEL GALLERY =================
 // MODIFICATION START
 
+// ================= SMOOTH SLIDING CAROUSEL =================
+
 const galleries = {
     agra: ["taj1.jpg","taj2.jpg","taj3.jpg","taj4.jpg","taj5.jpg"],
     delhi: ["delhi1.jpg","delhi2.jpg","delhi3.jpg","delhi4.jpg","delhi5.jpg"],
@@ -52,33 +54,40 @@ let currentIndex = 0;
 function openCarousel(city) {
     currentCity = city;
     currentIndex = 0;
+
+    const track = document.getElementById("carouselTrack");
+    track.innerHTML = "";
+
+    galleries[city].forEach(img => {
+        const image = document.createElement("img");
+        image.src = "images/" + img;
+        track.appendChild(image);
+    });
+
     document.getElementById("carouselPopup").style.display = "flex";
-    updateImage();
+    updateSlide();
 }
 
 function closeCarousel() {
     document.getElementById("carouselPopup").style.display = "none";
 }
 
-function updateImage() {
-    document.getElementById("carouselImage").src =
-        "images/" + galleries[currentCity][currentIndex];
+function updateSlide() {
+    const track = document.getElementById("carouselTrack");
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
 function nextImage() {
     currentIndex = (currentIndex + 1) % galleries[currentCity].length;
-    updateImage();
+    updateSlide();
 }
 
 function prevImage() {
     currentIndex =
         (currentIndex - 1 + galleries[currentCity].length) % galleries[currentCity].length;
-    updateImage();
+    updateSlide();
 }
 
-// MODIFICATION END
-
-// MODIFICATION END
 // ================= ANIMATED COUNTERS =================
 
 document.addEventListener("DOMContentLoaded", function () {
