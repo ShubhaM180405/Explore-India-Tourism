@@ -183,7 +183,7 @@ footer {
 }
 
 .package-card {
-    height: 220px;
+    height: 250px;
     border-radius: 18px;
     background-size: cover;
     background-position: center;
@@ -344,3 +344,4 @@ footer {
     color: white;
     cursor: pointer;
 }
+
